@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: vision-template
+    restart: unless-stopped
+    ports:
+      - "5173:3000"
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
