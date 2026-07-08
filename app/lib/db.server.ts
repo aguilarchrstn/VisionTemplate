@@ -2,7 +2,7 @@ import "dotenv/config";
 import { Pool } from "pg";
 
 const connectionString =
-  process.env.DATABASE_URL ?? "postgresql://localhost:5432/vision_template";
+  process.env.DATABASE_URL ?? "postgres://postgres:4Clientonly!23@host.docker.internal:5432/vision_template";
 
 // Reuse a single pool across HMR reloads in dev.
 const globalForDb = globalThis as unknown as { __pgPool?: Pool };
